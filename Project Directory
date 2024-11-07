@@ -1,0 +1,8 @@
+EcoIntelliSense/
+├── README.md
+├── app.js
+├── sensors/
+│   ├── temperatureSensor.js
+│   ├── humiditySensor.js
+│   └── airQualitySensor.js
+└── package.json
