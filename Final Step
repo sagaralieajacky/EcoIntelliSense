@@ -1,0 +1,16 @@
+#Navigate to Your Project Directory:
+
+bash
+Copy code
+cd C:\Users\sagar\MyProjectFolder\EcoIntelliSense
+
+#Git Commands:
+
+bash
+Copy code
+git init
+git add .
+git commit -m "Initial commit with EcoIntelliSense project"
+git remote add origin https://github.com/sagaralieajacky/EcoIntelliSense.git
+git branch -M main
+git push -u origin main
