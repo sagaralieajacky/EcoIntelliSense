@@ -1,0 +1,60 @@
+#Create package.json: Run this command in your project folder:
+npm init -y
+
+#Create app.js (Main Application File):
+const { getTemperature } = require('./sensors/temperatureSensor');
+const { getHumidity } = require('./sensors/humiditySensor');
+const { getAirQuality } = require('./sensors/airQualitySensor');
+
+console.log("EcoIntelliSense Environmental Monitoring System");
+
+console.log("Collecting data...");
+
+const temperature = getTemperature();
+const humidity = getHumidity();
+const airQuality = getAirQuality();
+
+console.log(`Temperature: ${temperature}°C`);
+console.log(`Humidity: ${humidity}%`);
+console.log(`Air Quality Index: ${airQuality}`);
+
+# Create Sensor Modules in sensors Folder:
+
+# temperatureSensor.js:
+function getTemperature() {
+    // Simulating temperature data collection
+    return (20 + Math.random() * 10).toFixed(2);
+}
+
+module.exports = { getTemperature };
+
+#humiditySensor.js:
+function getHumidity() {
+    // Simulating humidity data collection
+    return (40 + Math.random() * 20).toFixed(2);
+}
+
+module.exports = { getHumidity };
+
+#airQualitySensor.js:
+
+javascript
+Copy code
+function getAirQuality() {
+    // Simulating air quality index data collection
+    return Math.floor(50 + Math.random() * 50);
+}
+
+module.exports = { getAirQuality };
+
+# create README.md:
+# EcoIntelliSense
+
+## Overview
+EcoIntelliSense is a real-time environmental monitoring system that gathers data on temperature, humidity, and air quality.
+
+## How to Run
+1. Clone the repository.
+2. Run the application:
+   ```bash
+   node app.js
